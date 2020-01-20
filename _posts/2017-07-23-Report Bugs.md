@@ -7,26 +7,26 @@ tags: [auto-save, history, version]
 typora-root-url: ../
 ---
 
-## Where to find us?
+## How to contact us?
 
 - Email: <hi@typora.io>
 - Github Issues: https://github.com/typora/typora-issues
 
-You could also reach us for suggestions, complains, or any discussions.
+You could also write to us for suggestions, complaints, or any discussion.
 
 ## What to tell us?
 
-- Your typora version and OS version
-- Descriptions about the bug, if you don't want to type, just throw us a screenshot is also OK.
-- A way to reproduce the bug, or a sample file that may trigger the bug is very helpful for us. We will appreciate it if you can find it and tell us that. If it cannot be reproduced, then anything that may relates is also very helpful.
+- Your Typora version and OS version
+- Descriptions about the bug; if you don't want to type, just throw us a screenshot is also OK.
+- A way to reproduce the bug, or a sample file that may trigger the bug is very helpful for us. We will appreciate it if you can find it and send it to us. If it cannot be reproduced, then anything that may relates is also helpful.
 
 ## Logs
 
-For critical bugs, like crash, or content loss, the log file may be helpful. You could find logs in
+For critical bugs, like crash, or content loss, the log file may be helpful. You can find logs in
 
 - **macOS**
 
-  Open `Console.app` and type "typora" in the search input
+  Open `Console.app` and type "typora" in the search input.
 
 - **Windows**
 
@@ -36,4 +36,4 @@ For critical bugs, like crash, or content loss, the log file may be helpful. You
 
   Click "Open Theme Folder" in preference panel, and find `typora.log` on its parent folder.
 
-If you want to send us log (which is very appreciated), do not attach it in Github for privacy concerns, please email to us directly. The log file should not contain any sensitive data, and we will only use it for debug purpose and will delete it asap.
+If you want to send us log (which is very appreciated), do not attach it in Github for privacy concerns, but please email to us directly. The log file should not contain any sensitive data, and we will only use it for debug purpose and will delete it as soon as possible.
