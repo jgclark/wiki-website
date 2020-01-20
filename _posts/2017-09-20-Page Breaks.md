@@ -10,25 +10,12 @@ typora-root-url: ../
 typora-copy-images-to: ../media/page-breaks
 ---
 
-Automatic Page Breaks
----------------------
+## Automatic Page Breaks
 
-Sometimes you may want to export to a PDF, 
-and have page breaks before all [top-level headings](Markdown-Reference/#headers), 
-perhaps always putting the header on a right-hand page.
+Sometimes you may want to export to a PDF with page breaks before all [top-level headings](Markdown-Reference/#headers), 
+perhaps also putting the header on a right-hand page.
 
-Top-level headings are created with a single-hash prefix `#` (and optional suffix)
-or an equals-sign underline `====`; 
-both yield `<h1>` elements in HTML output.
-Second-level headings are created with a double-hash prefix `##` 
-or an hyphen-minus underline `----`; 
-both yield `<h2>` elements.
-Headings from the third `###` to sixth `######` level have no alternate underline syntax 
-and yield HTML elements `<h3>` through `<h6>`, respectively.
-
-To add automatic pagination before headings,
-open the [themes folder](About-Themes/), 
-and edit the [respective CSS file](Add-Custom-CSS/). 
+To add automatic pagination before top-level headings (created with a single-hash prefix `#`), open the [themes folder](About-Themes/), and [edit the CSS file](Add-Custom-CSS/). 
 
 ~~~~ css
 @media print, (overflow-block: paged) or (overflow-block: optional-paged)
@@ -66,16 +53,11 @@ and edit the [respective CSS file](Add-Custom-CSS/).
 }
 ~~~~
 
-Now when exporting, 
-at least one new page will be created before each top-level heading, 
-except the first one.
+When exporting, at least one new page will be created before each top-level heading, except the first one.
 
-This usually requires, however, that the Markdown file is first converted to HTML and then to PDF or print. 
-It will probably not work as intended if converting from intermediate LaTeX to PDF, 
-as Pandoc does by default.
+This usually requires, however, that the Markdown file is first converted to HTML and then to PDF or print. It will probably not work as intended if converting from intermediate LaTeX to PDF,  as Pandoc does by default.
 
-Forced Page Break
------------------
+## Forced Page Break
 
 There are several ways to insert a manual page break in a document using custom CSS.
 
@@ -89,31 +71,29 @@ Markdown with embedded HTML:
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-Markdown continues.
+Markdown continues ...
 ~~~~
 ~~~~ html
 <p>Markdown with embedded HTML:</p>
 <div style="page-break-after: always; break-after: page;"></div>
-<p>Markdown continues.</p>
+<p>Markdown continues ...</p>
 ~~~~
 
 ### HTML and Central CSS
 
-If manual page breaks are needed frequently,
-it makes more sense to use an [external stylesheet](Add-Custom-CSS/)
-for better maintenance and less clutter.
+If manual page breaks are needed frequently, it makes more sense to use an [external stylesheet](Add-Custom-CSS/) for better maintenance and less clutter.
 
 ~~~~ markdown
 Markdown with embedded HTML:
 
 <div class="page-break"></div>
 
-Markdown continues.
+Markdown continues ...
 ~~~~
 ~~~~ html
 <p>Markdown with embedded HTML:</p>
 <div class="page-break"></div>
-<p>Markdown continues.</p>
+<p>Markdown continues ...</p>
 ~~~~
 ~~~~ css
 /* completely hide the element where it is not needed */
@@ -211,4 +191,3 @@ break-inside:       auto           > page-break-inside: auto
                   | avoid-column 
                   | avoid-region
 ~~~~
-
